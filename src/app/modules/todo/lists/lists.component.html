@@ -1,0 +1,103 @@
+<div class="lists">
+  <h1>To-Do Lists</h1>
+  <div class="create-list-button">
+    <a class="red push_button" (click)="createList()">Create New List</a>
+  </div>
+  <div class="todo-listings row">
+    <div class="col-md-12">
+      <p class="listings-count">
+        <span class="highlight">{{ allLists?.length }} To-Do Lists Found!</span>
+      </p>
+    </div>
+    <div *ngFor="let list of allLists; let i = index;" class="col-md-4 mb-5">
+      <div class="card text-center">
+        <img routerLink="{{list.id}}/view" class="card-img-top"
+        src="https://dummyimage.com/450x250/563d7c/ffffff&text={{ list.title | titlecase }}"
+        alt="{{ list.title }}">
+        <div class="card-body" id="card">
+          <h5 routerLink="{{list.id}}/view" class="card-title">{{list.list_items.length}} Task(s)</h5>
+        </div>
+        <div class="card-footer text-muted">
+          <div class="row">
+            <div class="col">
+              <!-- <a href=""><i class="fas fa-map"></i></a> -->
+              {{ list.created_on | date: 'd/M/yy h:mm a' }}
+            </div>
+            <!-- <div class="col">
+              <a href="mailto:test@test.com"><i class="fas fa-envelope"></i></a>
+            </div> -->
+            <div class="col">
+              <a routerLink="edit" class="float-right"><i class="fas fa-trash" style="color: #D25068;"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-4 mt-5">
+      <div class="card text-center">
+        <img class="card-img-top" src="https://picsum.photos/450/251?random" alt="Card image cap">
+        <div class="card-body" id="card">
+          <h5 class="card-title">Title</h5>
+        </div>
+        <div class="card-footer text-muted">
+          <div class="row">
+            <div class="col">
+              <a href=""><i class="fas fa-map"></i></a>
+            </div>
+            <div class="col">
+              <a href="mailto:test@test.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="col">
+              <a href="tel:+123456789"><i class="fas fa-phone"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mt-5">
+      <div class="card text-center">
+        <img class="card-img-top" src="https://picsum.photos/450/252?random" alt="Card image cap">
+        <div class="card-body" id="card">
+          <h5 class="card-title">Title</h5>
+        </div>
+        <div class="card-footer text-muted">
+          <div class="row">
+            <div class="col">
+              <a href=""><i class="fas fa-map"></i></a>
+            </div>
+            <div class="col">
+              <a href="mailto:test@test.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="col">
+              <a href="tel:+123456789"><i class="fas fa-phone"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mt-5">
+      <div class="card text-center">
+        <img class="card-img-top" src="https://picsum.photos/450/253?random" alt="Card image cap">
+        <div class="card-body" id="card">
+          <h5 class="card-title">Title</h5>
+        </div>
+        <div class="card-footer text-muted">
+          <div class="row">
+            <div class="col">
+              <a href=""><i class="fas fa-map"></i></a>
+            </div>
+            <div class="col">
+              <a href="mailto:test@test.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="col">
+              <a href="tel:+123456789"><i class="fas fa-phone"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <div class="create-list-button">
+    <a class="push_button red" (click)="createList()">Create New List</a>
+  </div>
+</div>

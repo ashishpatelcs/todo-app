@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
+// Import global font
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+// @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+// Import Font Awesome
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+  // background-image:url(https://source.unsplash.com/random);
+  background-image:url(https://images.unsplash.com/photo-1548423921-794700dc95af?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height:100vh;
+}
